@@ -1,0 +1,144 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+    }
+
+    /* Top Header */
+    .header {
+      background: #3c3c7a;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 25px;
+    }
+    .header h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .menu {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* Main Flyer */
+    .flyer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 40px 50px;
+    }
+
+    /* Left side with image */
+    .flyer-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .flyer-left img {
+      max-width: 350px;
+    }
+
+    /* Right content */
+    .flyer-right {
+      flex: 1;
+      padding-left: 40px;
+    }
+
+    .flyer-right h1 {
+      font-size: 45px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .flyer-right h1 span {
+      color: #3c3c7a;
+    }
+
+    .services-box {
+      background: #3c3c7a;
+      color: #fff;
+      padding: 25px;
+      border-radius: 10px 0 0 10px;
+      width: fit-content;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 30px;
+    }
+    .services-box p {
+      font-size: 16px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #b31d1d;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 12px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #ff3030;
+    }
+
+    .contact {
+      background: #f0f0f0;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .contact i {
+      color: #b31d1d;
+    }
+
+    /* Social icons */
+    .social {
+      margin-top: 20px;
+      display: flex;
+      gap: 12px;
+    }
+    .social img {
+      width: 30px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .social img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 20px;
+      padding: 15px;
+    }
+
+    @media(max-width: 900px) {
+      .flyer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .flyer-right {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+      .services-box {
+        grid-template-columns: 1fr;
+      }
+    }
