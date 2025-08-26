@@ -3,200 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DUC FILMS</title>
+  <title>DUC FILMS Flyer</title>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
       background: #fff;
-      color: #222;
-      overflow-x: hidden;
+      color: #000;
     }
 
-    header {
-      width: 100%;
+    /* Top Header */
+    .header {
+      background: #3c3c7a;
+      color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 40px;
-      background: #3c3c7a;
-      color: #fff;
-      font-weight: 600;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 12px 25px;
     }
-
-    header .menu {
+    .header h2 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .menu {
       font-size: 22px;
       cursor: pointer;
     }
 
-    .container {
+    /* Main Flyer */
+    .flyer {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
-      padding: 50px 10%;
-      flex-wrap: wrap;
+      padding: 40px 50px;
     }
 
-    .left img {
-      width: 350px;
-      animation: float 3s ease-in-out infinite;
+    /* Left side with image */
+    .flyer-left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .flyer-left img {
+      max-width: 350px;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0); }
+    /* Right content */
+    .flyer-right {
+      flex: 1;
+      padding-left: 40px;
     }
 
-    .right {
-      max-width: 600px;
-      animation: fadeInUp 1.5s ease;
-    }
-
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .right h1 {
-      font-size: 40px;
+    .flyer-right h1 {
+      font-size: 45px;
+      font-weight: 700;
       margin-bottom: 20px;
     }
-
-    .right h1 span {
+    .flyer-right h1 span {
       color: #3c3c7a;
-      animation: colorChange 3s infinite alternate;
     }
 
-    @keyframes colorChange {
-      from { color: #3c3c7a; }
-      to { color: #b31d1d; }
-    }
-
-    .services {
+    .services-box {
       background: #3c3c7a;
-      color: white;
+      color: #fff;
       padding: 25px;
-      border-radius: 12px;
-      margin-bottom: 25px;
+      border-radius: 10px 0 0 10px;
+      width: fit-content;
+      margin-bottom: 20px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 30px;
     }
-
-    .services p {
+    .services-box p {
       font-size: 16px;
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
-
-    .services p:hover {
-      transform: translateX(5px);
-      color: #ffd700;
     }
 
     .btn {
       display: inline-block;
       background: #b31d1d;
       color: #fff;
-      padding: 12px 20px;
-      border-radius: 6px;
+      padding: 10px 18px;
+      border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: transform 0.3s, background 0.3s;
+      margin-bottom: 12px;
+      transition: background 0.3s;
     }
-
     .btn:hover {
-      transform: scale(1.05);
       background: #ff3030;
     }
 
     .contact {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      display: flex;
+      background: #f0f0f0;
+      padding: 8px 12px;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      border-radius: 5px;
+      font-weight: bold;
     }
-
     .contact i {
       color: #b31d1d;
-      font-size: 24px;
-      animation: pulse 1.5s infinite;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.6; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
+    /* Social icons */
     .social {
-      margin-top: 30px;
+      margin-top: 20px;
       display: flex;
-      gap: 15px;
+      gap: 12px;
     }
-
-    .social a {
-      font-size: 28px;
-      color: #3c3c7a;
-      transition: transform 0.3s, color 0.3s;
+    .social img {
+      width: 30px;
+      cursor: pointer;
+      transition: transform 0.3s;
     }
-
-    .social a:hover {
-      transform: translateY(-5px);
-      color: #b31d1d;
+    .social img:hover {
+      transform: scale(1.1);
     }
 
     footer {
       text-align: center;
-      padding: 20px;
       font-weight: bold;
-      background: #f5f5f5;
-      margin-top: 40px;
+      font-size: 18px;
+      margin-top: 20px;
+      padding: 15px;
     }
 
     @media(max-width: 900px) {
-      .container {
+      .flyer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
       }
-      .left img {
-        width: 250px;
-        margin-bottom: 20px;
+      .flyer-right {
+        padding-left: 0;
+        margin-top: 20px;
       }
-      .services {
+      .services-box {
         grid-template-columns: 1fr;
       }
     }
   </style>
-  <!-- Font Awesome for icons -->
+  <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <header>
-    <div>DUC FILMS</div>
+  <!-- Header -->
+  <div class="header">
+    <h2>DUC FILMS</h2>
     <div class="menu">&#9776;</div>
-  </header>
+  </div>
 
-  <section class="container">
-    <div class="left">
-      <img src="https://i.ibb.co/TkSvQqt/person.png" alt="Man with laptop">
+  <!-- Flyer body -->
+  <section class="flyer">
+    <!-- Left Image -->
+    <div class="flyer-left">
+      <img src="https://i.ibb.co/TkSvQqt/person.png" alt="Person with Laptop">
     </div>
 
-    <div class="right">
+    <!-- Right Text -->
+    <div class="flyer-right">
       <h1>DO YOU <span>NEED?</span></h1>
-      <div class="services">
+
+      <div class="services-box">
         <p>A Flyer / Poster</p>
         <p>Music Video</p>
         <p>Website</p>
@@ -214,11 +190,11 @@
       </div>
 
       <div class="social">
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-google"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
+        <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp">
+        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="instagram">
+        <img src="https://img.icons8.com/ios-filled/50/twitterx.png" alt="twitter">
+        <img src="https://img.icons8.com/color/48/gmail.png" alt="gmail">
+        <img src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube">
       </div>
     </div>
   </section>
