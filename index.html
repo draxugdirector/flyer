@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DUC FILMS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: #3c3c7a;
+      color: #fff;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header .menu {
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 10%;
+      flex-wrap: wrap;
+    }
+
+    .left img {
+      width: 350px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .right {
+      max-width: 600px;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .right h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .right h1 span {
+      color: #3c3c7a;
+      animation: colorChange 3s infinite alternate;
+    }
+
+    @keyframes colorChange {
+      from { color: #3c3c7a; }
+      to { color: #b31d1d; }
+    }
+
+    .services {
+      background: #3c3c7a;
+      color: white;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px 20px;
+    }
+
+    .services p {
+      font-size: 16px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+
+    .services p:hover {
+      transform: translateX(5px);
+      color: #ffd700;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #b31d1d;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: #ff3030;
+    }
+
+    .contact {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contact i {
+      color: #b31d1d;
+      font-size: 24px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .social {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+    }
+
+    .social a {
+      font-size: 28px;
+      color: #3c3c7a;
+      transition: transform 0.3s, color 0.3s;
+    }
+
+    .social a:hover {
+      transform: translateY(-5px);
+      color: #b31d1d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-weight: bold;
+      background: #f5f5f5;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 900px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .left img {
+        width: 250px;
+        margin-bottom: 20px;
+      }
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div>DUC FILMS</div>
+    <div class="menu">&#9776;</div>
+  </header>
+
+  <section class="container">
+    <div class="left">
+      <img src="https://i.ibb.co/TkSvQqt/person.png" alt="Man with laptop">
+    </div>
+
+    <div class="right">
+      <h1>DO YOU <span>NEED?</span></h1>
+      <div class="services">
+        <p>A Flyer / Poster</p>
+        <p>Music Video</p>
+        <p>Website</p>
+        <p>TV Advert</p>
+        <p>Data Analysis</p>
+        <p>Mobile App</p>
+        <p>IT Consulting</p>
+        <p>Software Solution</p>
+      </div>
+
+      <a href="#" class="btn">Contact us Now</a>
+
+      <div class="contact">
+        <i class="fas fa-phone"></i> 0708804601
+      </div>
+
+      <div class="social">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Build your Solution Now 🚀
+  </footer>
+
+</body>
+</html>
